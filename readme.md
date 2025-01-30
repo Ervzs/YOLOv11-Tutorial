@@ -10,7 +10,7 @@
 3. Set Python 3.10 as your default. You can change this in System Environment.
 4. Create and activate a virtual environment:
    ```sh
-   python3.10 -m venv venv
+   python -m venv venv
    source venv/bin/activate  # For Linux/macOS
    venv\Scripts\activate     # For Windows
    ```
