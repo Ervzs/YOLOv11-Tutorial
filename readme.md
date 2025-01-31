@@ -1,5 +1,10 @@
 # YOLOv11 Tutorial
 
+## Labeling Dataset from scratch
+Watch and follow the instruction for [Labeling images](https://www.youtube.com/watch?v=r0RspiLG260&t=574s)
+
+If you have labeled dataset already then skip this step.
+
 ## Setup Virtual Environment
 
 1. Download and install [Python 3.10](https://www.python.org/downloads/) if you haven't already.
