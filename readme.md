@@ -42,6 +42,21 @@
 1. Use `split-datasets.py` to split your dataset:
    - 80% for training
    - 20% for validation
+  
+## Why do we need this split?
+
+### Training Set (80%):
+
+This portion of the data is used to train the YOLO model.
+The model learns patterns, object features, and relationships from this dataset.
+The larger the training set, the better the model can generalize to unseen images.
+
+### Validation Set (20%):
+
+This is used to evaluate the model during training but not used for learning.
+It helps monitor the model’s performance and adjust hyperparameters (e.g., learning rate, batch size).
+Prevents overfitting—where the model memorizes training images but performs poorly on new images.
+##
 2. Create a `data.yaml` file and follow the format provided in the repository. This file will be used for training.
 
 ## Train the Model
@@ -50,6 +65,7 @@ Start training using the following command:
 ```sh
 yolo detect train data=C:/_YOLO-Tutorial/data.yaml model=yolo11n.pt epochs=50 imgsz=640
 ```
+After training, it will show you the directory to where the model is saved.
 
 ## Test your Model
 This will detect objects in your sample images:
