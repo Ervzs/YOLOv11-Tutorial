@@ -78,6 +78,17 @@ This will detect objects in your sample images:
 yolo detect predict source=C:\_YOLO-Tutorial\Image-Test model=C:\_YOLO-Tutorial\runs\detect\train2\weights\best.pt
 ```
 
+### Fine tuning YOLO Model
+1. Get the required dataset that will be added to the model.
+2. Update the .yaml file (number of classes and class name of the object to be added)
+3. Change the class ID in the annotation/label file. Match it with the index in the class name in .yaml
+4. Make sure to combine the old class (10-30%) and the new class (70-90%) to avoid catastrophic forgetting. You will then use this for training.
+   
+Start training using the following command:
+```sh
+yolo detect train data=C:\YOLO-Test\Mobile-phone-detection\data.yaml model=C:\YOLO-Test\runs\detect\train\weights\last.pt epochs=150 patience=15 imgsz=640 batch=-1
+```
+
 ## Notes
 - Ensure all dependencies are properly installed before training.
 - Adjust `epochs` and `imgsz` according to your requirements.
