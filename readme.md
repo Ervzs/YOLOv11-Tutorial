@@ -68,7 +68,7 @@ Prevents overfitting—where the model memorizes training images but performs po
 
 Start training using the following command:
 ```sh
-yolo detect train data=C:\YOLO-Test\playing-card\data.yaml model=yolo11s.pt epochs=150 patience=20 imgsz=640 batch=-1
+yolo detect train data=C:\YOLO-Test\playing-card\data.yaml model=yolo11l.pt epochs=150 patience=20 imgsz=1280 batch=-1
 ```
 After training, it will show you the directory to where the model is saved.
 
